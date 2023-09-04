@@ -9,16 +9,20 @@ using namespace std;
 
 class Datetime{
     private:
-        time_t datetime;
+        time_t* datetime;
+        tm* tm_datetime;
     public:
         Datetime(int year, int month, int day, int hour, int minute);
         Datetime();
+        ~Datetime();
 
         string get_date();
         string get_time();
 
+        bool isLeapYear(int year);
+
         // operators
-        friend float operator-(Datetime &d1, Datetime &d2);
+        friend int operator-(Datetime &d1, Datetime &d2);
         friend bool operator==(Datetime &d1, Datetime &d2);
         friend bool operator!=(Datetime &d1, Datetime &d2);
         friend bool operator<(Datetime &d1, Datetime &d2);
