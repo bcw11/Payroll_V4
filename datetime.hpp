@@ -11,6 +11,9 @@ class Datetime{
     private:
         time_t* datetime;
         tm* tm_datetime;
+
+        static const int MIN_YEAR = 2019;
+        static const int MAX_YEAR = 2100;
     public:
         Datetime(int year, int month, int day, int hour, int minute);
         Datetime();
