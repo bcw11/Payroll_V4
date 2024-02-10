@@ -14,6 +14,9 @@ User::User(int id, string username) : hours_worked(0), hours_overtime(0), hours_
 
     // TODO: add times into vector 
 
+    // TODO: need to hold vector of user exceptions
+        // define which exceptions to hold 
+
     // if no missing times set missing_time to false 
     // & calculate the hours 
 
